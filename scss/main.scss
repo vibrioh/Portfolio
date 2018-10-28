@@ -1,6 +1,41 @@
 @import "config";
 @import "menu";
 
+@font-face {
+  font-family: Simplifica;
+  src: url("../css/font/Simplifica_Sans.ttf");
+}
+
+@font-face {
+  font-family: Bauhaus;
+  src: url("../css/font/BAUHS93.ttf");
+}
+
+@font-face {
+  font-family: Aileron-Heavy;
+  src: url("../css/font/Aileron-Heavy.otf");
+}
+
+@font-face {
+  font-family: Aileron-UltraLight;
+  src: url("../css/font/Aileron-UltraLight.otf");
+}
+
+@font-face {
+  font-family: ZefaniStencil-Regular;
+  src: url("../css/font/ZefaniStencil-Regular.otf");
+}
+
+@font-face {
+  font-family: Audrey-Normal;
+  src: url("../css/font/Audrey-Normal.otf");
+}
+
+@font-face {
+  font-family: Bavro-Regular;
+  src: url("../css/font/Bavro-Regular.ttf");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,13 +46,47 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   line-height: 1.5;
 }
 
 // Headings
-h1,
-h2,
+h1 {
+  &.lg-heading {
+    color: #fff;
+    font-weight: 900;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+    font-family: Bauhaus;
+    margin: 0;
+  }
+}
+
+h2 {
+  &.lg-heading {
+    color: lighten($primary-color, 25%);
+    font-weight: 500;
+    font-size: 2.25em;
+    margin-bottom: 15px;
+    font-family: Bauhaus;
+    margin: 0;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    color: $text;
+    margin: 0;
+    margin-top: 15px;
+    text-align: justify;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
 h3 {
   margin: 0;
   font-weight: 400;
@@ -36,6 +105,13 @@ h3 {
 a {
   color: #fff;
   text-decoration: none;
+  &.text-link {
+    color: #0892d0;
+    text-decoration: none;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 }
 
 header {
