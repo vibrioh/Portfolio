@@ -62,11 +62,22 @@ h1 {
     font-family: Bauhaus;
     margin: 0;
   }
+
+  &.sm-heading {
+    color: #fff;
+    font-weight: 900;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+    font-family: ZefaniStencil-Regular;
+    margin: 0;
+  }
 }
 
 h2 {
   &.lg-heading {
-    color: lighten($primary-color, 25%);
+    color: lighten($primary-color, 55%);
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px;
@@ -77,19 +88,21 @@ h2 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($primary-color, 50), 0.5);
     color: $text;
     margin: 0;
     margin-top: 15px;
     text-align: justify;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: Aileron-UltraLight;
     font-size: 20px;
     line-height: 32px;
   }
 }
 h3 {
-  margin: 0;
-  font-weight: 400;
+  margin: 5;
+  font-weight: 300;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.5rem;
 
   &.lg-heading {
     font-size: 6rem;
@@ -106,10 +119,21 @@ a {
   color: #fff;
   text-decoration: none;
   &.text-link {
-    color: #0892d0;
+    color: lighten($primary-color, 55%);
     text-decoration: none;
     &:hover {
       color: $secondary-color;
+    }
+  }
+
+  &.mail-link {
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
   }
 }
@@ -162,7 +186,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: $secondary-color 3px solid;
+    border: $secondary-color 2px solid;
   }
 
   .bio {
@@ -210,9 +234,10 @@ main {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 
   div {
-    font-size: 2rem;
+    font-size: 1.7rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
