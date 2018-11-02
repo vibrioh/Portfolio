@@ -56,7 +56,7 @@
     .menu-branding .portrait {
       width: 350px;
       height: 350px;
-      background: url("../img/portrait.jpg");
+      background: url("../img/portrait.png");
       border-radius: 50%;
       border: solid 3px #feffbd; }
   .menu .nav-item {
@@ -200,7 +200,7 @@ a {
   color: #fff;
   text-decoration: none; }
   a.text-link {
-    color: burlywood;
+    color: #ff9900;
     text-decoration: none; }
     a.text-link:hover {
       color: #feffbd; }
@@ -421,12 +421,12 @@ main {
   font-size: 2em; }
 
 .button-green {
-  background: #2ecc71; }
+  background: #339933; }
   .button-green:hover {
-    background: #26ab5f;
+    background: #297a29;
     transition: all 0.3s ease; }
   .button-green:active {
-    background: #176437; }
+    background: #133913; }
 
 .button-blue {
   background: #3498db; }
@@ -445,12 +445,12 @@ main {
     background: #796307; }
 
 .button-red {
-  background: #e74c3c; }
+  background: #ff4488; }
   .button-red:hover {
-    background: #df2e1b;
+    background: #ff1b6e;
     transition: all 0.3s ease; }
   .button-red:active {
-    background: #921e12; }
+    background: #c40047; }
 
 /*Other Stylez*/
 .wrap {
@@ -467,6 +467,10 @@ h1 {
   font-family: Bauhaus;
   margin-top: 130px;
   margin-bottom: 130px; }
+
+.prj-block {
+  margin-bottom: 10px;
+  text-align: center; }
 
 .project-area {
   background-color: #fff;
@@ -485,7 +489,7 @@ h1 {
     margin-top: 0;
     color: #191d23; }
   .project-area .section {
-    border-left-color: orange;
+    border-left-color: #ff9900;
     border-left-style: solid;
     border-left-width: 8px;
     padding-left: 6px; }
@@ -521,7 +525,7 @@ h1 {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
+      background: url("../img/portrait_small.png");
       width: 150px;
       height: 150px; }
   .about-info {
