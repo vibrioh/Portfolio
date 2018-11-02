@@ -119,7 +119,7 @@ a {
   color: #fff;
   text-decoration: none;
   &.text-link {
-    color: lighten($primary-color, 55%);
+    color: burlywood;
     text-decoration: none;
     &:hover {
       color: $secondary-color;
@@ -203,9 +203,30 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: darken($primary-color, 2%);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    text-align: center;
+    font-family: Aileron-UltraLight;
+    // font-size: 1.2em;
+  }
+
+  h4 {
+    margin: 0;
+    font-family: Aileron-Heavy;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: Simplifica;
+    font-size: 1.4em;
   }
 }
 
@@ -290,6 +311,83 @@ main {
   }
 }
 
+#contact-block {
+  padding: 50px 15px;
+  // background: $secondary-color;
+  text-align: center;
+  h2 {
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-weight: 500;
+  }
+}
+
+#contact-form {
+  // max-width: 800px;
+  margin: 0 auto;
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    background: #2e3641;
+    color: #fff;
+    transition: 0.5s ease all;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #fff;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder,
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #fff;
+  }
+  input:focus {
+    outline: none;
+    background: #191d23;
+  }
+  textarea {
+    &:focus {
+      outline: none;
+      background: #191d23;
+    }
+    height: 150px;
+    resize: none;
+  }
+  button {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    color: #4e5b6e;
+    font-weight: 800;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.5s ease all;
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
 // Button Styles
 .btn {
   display: block;
@@ -320,6 +418,94 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "Poiret One", cursive;
+  font-size: 2em;
+}
+
+.button-green {
+  @include button-bg(#2ecc71);
+}
+
+.button-blue {
+  @include button-bg(#3498db);
+}
+
+.button-yellow {
+  @include button-bg(#f1c40f);
+}
+
+.button-red {
+  @include button-bg(#e74c3c);
+}
+
+/*Other Stylez*/
+.wrap {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 4em;
+}
+
+// add for single project page
+.project-name {
+  // display: table;
+  text-align: center;
+  // font-size: 3vw;
+  font-family: Bauhaus;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+
+.project-area {
+  background-color: #fff;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  color: set-text-color($primary-color);
+  h2 {
+    color: #191d23;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 2000;
+    font-size: 2em;
+  }
+
+  p {
+    margin-top: 0;
+    color: #191d23;
+  }
+
+  .section {
+    border-left-color: orange;
+    border-left-style: solid;
+    border-left-width: 8px;
+    padding-left: 6px;
+  }
 }
 
 @import "mobile";

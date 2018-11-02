@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -199,7 +200,7 @@ a {
   color: #fff;
   text-decoration: none; }
   a.text-link {
-    color: #9bc1d9;
+    color: burlywood;
     text-decoration: none; }
     a.text-link:hover {
       color: #feffbd; }
@@ -251,9 +252,23 @@ main {
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job {
-    background: #204054;
+    background: #162c3b;
     padding: 0.5rem;
     border-bottom: #feffbd 5px solid; }
+  .about-info h2 {
+    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    text-align: center;
+    font-family: Aileron-UltraLight; }
+  .about-info h4 {
+    margin: 0;
+    font-family: Aileron-Heavy;
+    font-size: 1.2em;
+    text-align: center; }
+  .about-info h3 {
+    font-family: Simplifica;
+    font-size: 1.4em; }
 
 .projects {
   margin-top: 25px;
@@ -312,6 +327,67 @@ main {
       .boxes div:hover span {
         color: #000; }
 
+#contact-block {
+  padding: 50px 15px;
+  text-align: center; }
+  #contact-block h2 {
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-weight: 500; }
+
+#contact-form {
+  margin: 0 auto; }
+  #contact-form input,
+  #contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    background: #2e3641;
+    color: #fff;
+    transition: 0.5s ease all; }
+  #contact-form input::-webkit-input-placeholder,
+  #contact-form textarea::-webkit-input-placeholder {
+    color: #fff; }
+  #contact-form input:-moz-placeholder,
+  #contact-form textarea:-moz-placeholder,
+  #contact-form input::-moz-placeholder,
+  #contact-form textarea::-moz-placeholder {
+    color: #fff;
+    opacity: 1; }
+  #contact-form input:-ms-input-placeholder,
+  #contact-form textarea:-ms-input-placeholder {
+    color: #fff; }
+  #contact-form input:focus {
+    outline: none;
+    background: #191d23; }
+  #contact-form textarea {
+    height: 150px;
+    resize: none; }
+    #contact-form textarea:focus {
+      outline: none;
+      background: #191d23; }
+  #contact-form button {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    color: #4e5b6e;
+    font-weight: 800;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.5s ease all; }
+    #contact-form button:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      padding: 0.5rem 1.5rem;
+      background: #feffbd;
+      color: #000; }
+      #contact-form button:hover span {
+        color: #000; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -335,6 +411,84 @@ main {
   background: #0b161d;
   color: #fff;
   height: 60px; }
+
+.button {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "Poiret One", cursive;
+  font-size: 2em; }
+
+.button-green {
+  background: #2ecc71; }
+  .button-green:hover {
+    background: #26ab5f;
+    transition: all 0.3s ease; }
+  .button-green:active {
+    background: #176437; }
+
+.button-blue {
+  background: #3498db; }
+  .button-blue:hover {
+    background: #2383c4;
+    transition: all 0.3s ease; }
+  .button-blue:active {
+    background: #16527a; }
+
+.button-yellow {
+  background: #f1c40f; }
+  .button-yellow:hover {
+    background: #cba50c;
+    transition: all 0.3s ease; }
+  .button-yellow:active {
+    background: #796307; }
+
+.button-red {
+  background: #e74c3c; }
+  .button-red:hover {
+    background: #df2e1b;
+    transition: all 0.3s ease; }
+  .button-red:active {
+    background: #921e12; }
+
+/*Other Stylez*/
+.wrap {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center; }
+
+h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 4em; }
+
+.project-name {
+  text-align: center;
+  font-family: Bauhaus;
+  margin-top: 130px;
+  margin-bottom: 130px; }
+
+.project-area {
+  background-color: #fff;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  color: #fff; }
+  .project-area h2 {
+    color: #191d23;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 2000;
+    font-size: 2em; }
+  .project-area p {
+    margin-top: 0;
+    color: #191d23; }
+  .project-area .section {
+    border-left-color: orange;
+    border-left-style: solid;
+    border-left-width: 8px;
+    padding-left: 6px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
