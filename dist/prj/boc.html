@@ -16,7 +16,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/academicons-1.8.0/css/academicons.css">
   <link rel="stylesheet" href="../css/main.css">
-  <title>BOC Behavior-Based Cybersecurity</title>
+  <title>BOC Adaptive Cybersecurity Monitoring</title>
 </head>
 
 <body>
@@ -58,7 +58,7 @@
 
   <main id="prj">
     <h1 class="project-name">
-      BOC Behavior-Based Cybersecurity
+      BOC Adaptive Cybersecurity Monitoring
     </h1>
     <div class="prj-block">
       <a href="../projects.html" class="button button-green">Back To Projects</a>
@@ -76,50 +76,41 @@
     <div class="project-area">
       <h2 class="section">Introduction</h2>
       <p>
-        As the world’s largest bank, Industrial and Commercial Bank of China (ICBC) naturally requires exceptionally
-        efficient, newest and most interesting attempts to use AI and ML in the lending business. IBM provides the AI
-        solutions with the contract of $10 Millions. We provide high-performance distributed graph database and graph
-        computing solutions to IBM as a subcontractor at $2 Millions. The project is huge, complicated and even
-        exploratory. The main aim is risk management on loans. With the numerous data，the system can predict
-        non-performing loans and simulate loan default cascades by modifying relations/properties of bank's customers.
-        The key features are acquired from graph computing, such as cycles, paths, closeness, betweenness, page rank,
-        connected components and so on. There are some features such as hidden relationships prediction and dynamic
-        graph display are novel to this industry.
+        The Adaptive Cybersecurity Monitoring System shall gather all relevant and available information about users,
+        devices, applications, and network events (collectively referred to as “entities”), detect anomalies at various
+        levels, and provide an aggregate risk assessment to predict cybersecurity risks of all entities. Due to the
+        inherent complexity associated with the development of the system’s information gathering mechanism (including
+        identifying, understanding, and formatting the source information), a phased approach is adopted to
+        progressively enable the analysis capabilities and surface analytical results at the user interface for
+        follow-up investigation by the monitoring individuals.
+
 
       </p>
 
       <h2 class="section">Implementation</h2>
       <p>
-        My main task is system deployment/integration/automation by Shell/Python scripts, client module in Python and
-        Dynamic Graph backend with Java. To deploy, graph database, graph engine, graph REST API, will be wrapped into
-        container with Flask/uWSGI/Nginx/Ubuntu using Docker. The images of Grest/Gasync (async server) will be
-        deployed with 3-clustered Kafka on 5 openSUSE servers. Upstream ETL processes data from ICBC Data Warehouse
-        each day and dumps to Graph Application Layer. The system
-        will detect, check and trigger loading process. Loading schema for one day's batch covers 9 main relationships
-        (edge label), more
-        than 70 true relations (edge properties) and over 600 millions loan customers (vertices). The batch-run
-        commands is configured into scripts and executed by High Availability Module, which is monitoring each server's
-        health status and switching between main and backup servers. Loading requests/files are processed and pushed to
-        Kafka clusters through Async sever, graph servers pull requests and finish loading. Then the predefined
-        analytics which are formed from complex business requirements will be invoked. It will compute all the features
-        needed for UI and ML module. The results will be stored locally in graph database and ported to Oracle Database
-        for downstream queries. All communications are
-        through RESTful API and Client Module in the Grest server.
+        The Adaptive Cybersecurity Monitoring System takes as input various levels of data from multiple monitoring
+        tools current in place at BOCNY, and produces as output an interactive visualization interface for the
+        monitoring individuals to review analytical results. The system is consisted of three main internal components.
+        The data processing component processes the raw data from the original data sources to extract, transform,
+        index, and load the needed information into the system’s central data store. It also computes features from the
+        processed data, which are used to create behavior models. The analysis component runs multiple anomaly
+        detection methods (e.g. behavior-based and flow-based) and generates an overall risk assessment. The
+        visualizations component presents analytical results and allows detail drill-down of data, which enables the
+        monitoring individuals to more easily consume system output in context through interactive visual analytics.
+
 
         <h2 class="section">Highlight</h2>
         <p>
-          Docker Deployment. <br>
-          Linux Shell. <br>
-          Big data flow. <br>
-          RESTful API. <br>
-          High Availability Design. <br>
-          Business Requirements Translation. <br>
-          Graph Algorithms.
+          1) The combination of behavior-based anomaly detection and flow-based anomaly detection to detect anomalies
+          from multiple perspectives. <br>
+          2) The use of graph and cognitive reasoning technologies to fuse various anomaly detection results and
+          propagate risks for producing an aggregate risk assessment.
+
         </p>
         <h2 class="section">Achievement</h2>
         <p>
-          Successfully delivered phase I (Basic Function and Dynamic Graph), II (Async and Distributed) and IV (Hight
-          Availability) so far, accumulating data for phase III (ML Module).
+          I delivered feature selection and graph database deployment, feature extraction.
         </p>
 
 
