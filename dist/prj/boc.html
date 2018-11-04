@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:url" content="http://www.hu-jun.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jun Hu's Portfolio" />
+  <meta property="og:description" content="Programmer" />
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />
+
+  <link rel="icon" type="image/png" href="../img/sunshine.png" izes="256x256" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/academicons-1.8.0/css/academicons.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>BOC Behavior-Based Cybersecurity</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../about.html" class="nav-link">
+            About
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="../projects.html" class="nav-link">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../contact.html" class="nav-link">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="prj">
+    <h1 class="project-name">
+      BOC Behavior-Based Cybersecurity
+    </h1>
+    <div class="prj-block">
+      <a href="../projects.html" class="button button-green">Back To Projects</a>
+    </div>
+
+
+
+
+
+
+    <h2 class="sm-heading">
+
+    </h2>
+
+    <div class="project-area">
+      <h2 class="section">Introduction</h2>
+      <p>
+        As the world’s largest bank, Industrial and Commercial Bank of China (ICBC) naturally requires exceptionally
+        efficient, newest and most interesting attempts to use AI and ML in the lending business. IBM provides the AI
+        solutions with the contract of $10 Millions. We provide high-performance distributed graph database and graph
+        computing solutions to IBM as a subcontractor at $2 Millions. The project is huge, complicated and even
+        exploratory. The main aim is risk management on loans. With the numerous data，the system can predict
+        non-performing loans and simulate loan default cascades by modifying relations/properties of bank's customers.
+        The key features are acquired from graph computing, such as cycles, paths, closeness, betweenness, page rank,
+        connected components and so on. There are some features such as hidden relationships prediction and dynamic
+        graph display are novel to this industry.
+
+      </p>
+
+      <h2 class="section">Implementation</h2>
+      <p>
+        My main task is system deployment/integration/automation by Shell/Python scripts, client module in Python and
+        Dynamic Graph backend with Java. To deploy, graph database, graph engine, graph REST API, will be wrapped into
+        container with Flask/uWSGI/Nginx/Ubuntu using Docker. The images of Grest/Gasync (async server) will be
+        deployed with 3-clustered Kafka on 5 openSUSE servers. Upstream ETL processes data from ICBC Data Warehouse
+        each day and dumps to Graph Application Layer. The system
+        will detect, check and trigger loading process. Loading schema for one day's batch covers 9 main relationships
+        (edge label), more
+        than 70 true relations (edge properties) and over 600 millions loan customers (vertices). The batch-run
+        commands is configured into scripts and executed by High Availability Module, which is monitoring each server's
+        health status and switching between main and backup servers. Loading requests/files are processed and pushed to
+        Kafka clusters through Async sever, graph servers pull requests and finish loading. Then the predefined
+        analytics which are formed from complex business requirements will be invoked. It will compute all the features
+        needed for UI and ML module. The results will be stored locally in graph database and ported to Oracle Database
+        for downstream queries. All communications are
+        through RESTful API and Client Module in the Grest server.
+
+        <h2 class="section">Highlight</h2>
+        <p>
+          Docker Deployment. <br>
+          Linux Shell. <br>
+          Big data flow. <br>
+          RESTful API. <br>
+          High Availability Design. <br>
+          Business Requirements Translation. <br>
+          Graph Algorithms.
+        </p>
+        <h2 class="section">Achievement</h2>
+        <p>
+          Successfully delivered phase I (Basic Function and Dynamic Graph), II (Async and Distributed) and IV (Hight
+          Availability) so far, accumulating data for phase III (ML Module).
+        </p>
+
+
+
+    </div>
+
+
+  </main>
+
+  <footer id="main-footer">
+    Copyright &copy; 2018
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

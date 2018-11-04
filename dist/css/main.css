@@ -452,6 +452,14 @@ main {
   .button-red:active {
     background: #c40047; }
 
+.button-gray {
+  background: #939fa5; }
+  .button-gray:hover {
+    background: #7d8b92;
+    transition: all 0.3s ease; }
+  .button-gray:active {
+    background: #545f65; }
+
 /*Other Stylez*/
 .wrap {
   margin: 0 auto;

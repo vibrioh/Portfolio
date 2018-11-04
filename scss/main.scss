@@ -458,6 +458,10 @@ main {
   @include button-bg(#ff4488);
 }
 
+.button-gray {
+  @include button-bg(#939fa5);
+}
+
 /*Other Stylez*/
 .wrap {
   margin: 0 auto;
