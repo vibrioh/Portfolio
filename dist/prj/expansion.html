@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:url" content="http://www.hu-jun.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jun Hu's Portfolio" />
+  <meta property="og:description" content="Programmer" />
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />
+
+  <link rel="icon" type="image/png" href="../img/sunshine.png" izes="256x256" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/academicons-1.8.0/css/academicons.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Query Expansion</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../about.html" class="nav-link">
+            About
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="../projects.html" class="nav-link">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../contact.html" class="nav-link">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="prj">
+    <h1 class="project-name">
+      Query Expansion
+    </h1>
+    <div class="prj-block">
+      <a href="../projects.html" class="button button-green">Back To Projects</a>
+    </div>
+
+    <div class="prj-block">
+      <a href="https://github.com/vibrioh/query-expansion" target="_blank" class="button button-red">GitHub</a>
+    </div>
+
+    <h2 class="sm-heading">
+
+    </h2>
+
+    <div class="project-area">
+      <h2 class="section">Introduction</h2>
+      <p>
+        Classic Rocchio Algorithm, deployed on Google Cloud with Google Search API.
+      </p>
+
+      <h2 class="section">Implementation</h2>
+      <p>
+        The program will first get arguments such as API key, search engine ID, precision@10, and query terms from user
+        input.
+
+        Then, in function search(), Google Custom Search API would be called to conduct the query. For each query
+        result receive from API call, the program encode context to utf-8 format, extract information including title,
+        link URL, and summary, and stored each result to a Query_result object. All results will be stored together in
+        query_result list.
+
+        In function get_feedback(), the program will print out each query result and get them labeled as True or False
+        by user. Then, the precision rate of current query would be computed. If this precision reaches precision@10
+        goal or zero, then terminate the program. Otherwise, function modify_query() would be called to prepare for
+        next round query.
+
+        In function modify_query(), query terms would be augmented by up to 2 new words. The order of query terms might
+        also be adjusted. The method of expanding and reordering query terms is largely based on Rocchio's Algorithm,
+        and would be explained in detail in the Query-modification Method section. Then, the modified query would be
+        fed into Google Custom Search API for the next iteration of query.
+
+
+        <h2 class="section">Highlight</h2>
+        <p>
+          Vector-space Model. <br>
+          Rocchio Algorithm.
+
+        </p>
+        <!-- <h2 class="section">Achievement</h2>
+        <p>
+
+        </p> -->
+
+
+
+    </div>
+
+
+  </main>
+
+  <footer id="main-footer">
+    Copyright &copy; 2018
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

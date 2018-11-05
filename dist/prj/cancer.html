@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:url" content="http://www.hu-jun.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jun Hu's Portfolio" />
+  <meta property="og:description" content="Programmer" />
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />
+
+  <link rel="icon" type="image/png" href="../img/sunshine.png" izes="256x256" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/academicons-1.8.0/css/academicons.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Cancer Classification on BCR</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../about.html" class="nav-link">
+            About
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="../projects.html" class="nav-link">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../contact.html" class="nav-link">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="prj">
+    <h1 class="project-name">
+      Cancer Classification on BCR
+    </h1>
+    <div class="prj-block">
+      <a href="../projects.html" class="button button-green">Back To Projects</a>
+    </div>
+
+    <div class="prj-block">
+      <a href="https://github.com/Sapphirine/Medical-Data-Analysis-Cancer-Research" target="_blank" class="button button-red">GitHub</a>
+    </div>
+
+    <h2 class="sm-heading">
+
+    </h2>
+
+    <div class="project-area">
+      <h2 class="section">Introduction</h2>
+      <p>
+        Understanding B-cell receptor repertoire from amino acid sequence is a fundamental problem in biology. In this
+        project, we explore how well we can classify B-cell immunoglobulin repertoires into cancer types through
+        examination of raw sequence. Using a large corpus of B-cell receptor repertoire sequencing fragments and their
+        associated cancer types, we learn dense vector representations for amino acid sequences using the co-occurrence
+        statistics of short fragments or/and fragments classification. Then, using this representation, we experiment
+        with several neural network architectures to train classifiers for cancer types identification. We show good
+        performance for a multi-class prediction problem with 4241 patients reports and 13 different cancer types. In
+        addition, we also build model to predict each patient’s survival outcome and overall survival days.
+      </p>
+
+      <h2 class="section">Implementation</h2>
+      <p>
+        Next-generation sequencing technologies generate large amounts of biological sequence information in the form
+        of DNA/RNA sequences. From DNA sequences we also know the amino acid sequences of proteins, which are the
+        fundamental molecules that perform most biological functions. High-throughput sequencing of B-cell
+        immunoglobulin repertoires (BCR) is increasingly being applied to gain insights into the adaptive immune
+        response in healthy individuals and in those with a wide range of diseases. Recent applications include the
+        study of autoimmunity, infection, allergy, cancer and aging. As sequencing technologies continue to improve,
+        these repertoire sequencing experiments are producing ever larger datasets. These data require specialized
+        bioinformatics pipelines to be analyzed effectively. These include methods for unique molecular identifiers and
+        sequencing error correction, V(D)J assignment and detection of novel alleles, clonal assignment, lineage tree
+        construction, somatic hypermutation modeling, selection analysis, and analysis of stereotyped or convergent
+        responses. The functionality of BCR is thus encoded in the amino acid sequence and understanding the
+        sequence-function relationship is a major challenge in bioinformatics. <br>
+        As we have learnt from the dataset, we have only 4,241 samples but with 12,934,656 sequences fregements and
+        5,960,182 unique sequences are among them. These sequences are lengths from zero to dozens. It is obvious that
+        we can not use all these variations as features for modeling and training. There are too much capacity and too
+        many variables, which are easy lead to overfitting.
+        Feature Selection and Extraction are the most important part in this project. We have tried clustering
+        sequences without considering any domain knowledge, then predict cancer types using clustered sequences as
+        features. Sequence clustering of amino acid sequences of varying lengths, specifically Ward’s method a general
+        agglomerative hierarchical clustering procedure, was chosen. Our second idea is to do feature selection and
+        extraction using a similar method from natural language processing concept. In addition we try to lower the
+        dimension by clustering the amino acids with some domain knowledge. “Bag-of-amino-acids” model. In natural
+        language processing and information retrieval, the bag-of-words model or vector space model is used to simplify
+        text representation, as a commonly used method of document classification. Here we build a “bag-of-amino-acids”
+        model as a tool of feature generation.
+
+
+        <h2 class="section">Highlight</h2>
+        <p>
+          Introduced NPL N-gram model into bioinformatics. <br>
+          TensorFlow with GPU.
+
+        </p>
+        <h2 class="section">Achievement</h2>
+        <p>
+          In sum, by random guessing, our problem will have a base a accuracy of 8%. Unigram or clustering unigram can
+          not have the accuracy above the random guessing. Bigram or clustering bigram will increase the accuracy to
+          20%. When apply trigram or clustering trigram, the accuracy can reach 30%. Combine trigram and clustering
+          trigram will achieve 35%. All features combined will have the most optimized accuracy of 40%.
+        </p>
+
+
+
+    </div>
+
+
+  </main>
+
+  <footer id="main-footer">
+    Copyright &copy; 2018
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
